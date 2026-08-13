@@ -58,7 +58,7 @@
 
         <!-- LADO DERECHO -->
         <div class="relative hidden lg:block">
-            <img src="{{ asset('img/banner1.jpg') }}"
+            <img src="{{ asset('img/banner2.jpg') }}"
                  class="absolute inset-0 w-full h-full object-cover">
 
             <div class="absolute inset-0 bg-gradient-to-l from-black/10 via-black/40 to-[#0b0f14]"></div>
