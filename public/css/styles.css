@@ -1,0 +1,1327 @@
+/* =========================================================
+   NUEVA IDENTIDAD - MOTOTAXIS / MOTOCICLETAS / CARGUERAS
+   SOLO DISEÑO - NO MODIFICA LA LÓGICA
+========================================================= */
+
+:root {
+    --brand-primary: #D7261E;
+    --brand-primary-dark: #A81410;
+    --brand-secondary: #1F2937;
+    --brand-surface: #111827;
+    --brand-surface-2: #0F172A;
+    --brand-border: #374151;
+    --brand-text: #F9FAFB;
+    --brand-text-muted: #9CA3AF;
+}
+
+/* Fondo general */
+body {
+    background: linear-gradient(180deg, #0B0F14 0%, #111827 100%);
+    color: var(--brand-text);
+    font-family: 'Inter', sans-serif;
+}
+
+/* ==================== COLORES GLOBALES ==================== */
+
+.text-primary {
+    color: var(--brand-primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--brand-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--brand-primary) !important;
+}
+
+.text-primary-container {
+    color: var(--brand-primary) !important;
+}
+
+.from-primary {
+    --tw-gradient-from: var(--brand-primary) !important;
+    --tw-gradient-to: var(--brand-primary-dark) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.to-primary-dim {
+    --tw-gradient-to: var(--brand-primary-dark) !important;
+}
+
+/* ==================== HERO PRINCIPAL ==================== */
+
+
+
+/* Badge destacado */
+.inline-flex.items-center.gap-2.px-4.py-1.rounded-full {
+    background: rgba(17, 24, 39, 0.82) !important;
+    border: 1px solid rgba(215, 38, 30, 0.35) !important;
+    color: #FCA5A5 !important;
+}
+
+/* ==================== CONTADORES ==================== */
+
+.bg-surface-container-highest,
+.bg-background.border-2 {
+    background: linear-gradient(145deg, #111827, #1F2937) !important;
+    border-color: rgba(215, 38, 30, 0.35) !important;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(215, 38, 30, 0.12);
+}
+
+/* ==================== BOTONES ==================== */
+
+button.bg-gradient-to-r,
+.btn-primary {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-dark)) !important;
+    border: none !important;
+    color: #fff !important;
+    font-weight: 800;
+    letter-spacing: .04em;
+    box-shadow:
+        0 10px 30px rgba(215, 38, 30, 0.35),
+        0 0 18px rgba(215, 38, 30, 0.18);
+    transition: all .25s ease;
+}
+
+button.bg-gradient-to-r:hover,
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 14px 36px rgba(215, 38, 30, 0.45),
+        0 0 26px rgba(215, 38, 30, 0.24);
+}
+
+/* ==================== TARJETAS DE PREMIOS / PRODUCTOS ==================== */
+
+.group.relative.bg-surface-container-highest {
+    background: linear-gradient(180deg, var(--brand-surface) 0%, var(--brand-surface-2) 100%) !important;
+    border: 1px solid rgba(55, 65, 81, 0.9) !important;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+    transition: all .35s ease;
+}
+
+.group.relative.bg-surface-container-highest:hover {
+    transform: translateY(-8px);
+    border-color: rgba(215, 38, 30, 0.55) !important;
+    box-shadow:
+        0 24px 50px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(215, 38, 30, 0.16);
+}
+
+/* Badge cantidad */
+.inline-flex.items-center.gap-2.px-3.py-1\\.5.rounded-full {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-dark)) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ==================== SECCIÓN CÓMO FUNCIONA ==================== */
+
+.bg-surface-container-low {
+    background: linear-gradient(180deg, #111827 0%, #0F172A 100%) !important;
+    border: 1px solid rgba(55, 65, 81, 0.7);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Números de pasos */
+.w-16.h-16.bg-surface-bright {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-dark)) !important;
+    color: #fff !important;
+    box-shadow: 0 0 28px rgba(215, 38, 30, 0.28);
+}
+
+/* ==================== GALERÍA GANADORES ==================== */
+
+.swiper-slide .rounded-2xl {
+    border: 1px solid rgba(55, 65, 81, 0.8);
+    background: var(--brand-surface);
+    overflow: hidden;
+}
+
+.swiper-slide .rounded-2xl:hover {
+    border-color: rgba(215, 38, 30, 0.55);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+/* ==================== MODAL ==================== */
+
+.modal-content {
+    background: linear-gradient(180deg, #111827 0%, #0B1220 100%) !important;
+    border: 1px solid rgba(215, 38, 30, 0.25) !important;
+    color: var(--brand-text) !important;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+
+.modal-header h2,
+.modal-body label,
+.modal-body .text-dark,
+.modal-body .fw-bold {
+    color: var(--brand-text) !important;
+}
+
+/* Inputs */
+.form-control,
+.form-select {
+    background: rgba(17, 24, 39, 0.95) !important;
+    border: 1px solid var(--brand-border) !important;
+    color: var(--brand-text) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--brand-primary) !important;
+    box-shadow: 0 0 0 0.2rem rgba(215, 38, 30, 0.18) !important;
+}
+
+/* Zona de comprobante */
+#dropZone {
+    background: rgba(17, 24, 39, 0.65) !important;
+    border: 2px dashed rgba(215, 38, 30, 0.4) !important;
+}
+
+#dropZone:hover {
+    border-color: var(--brand-primary) !important;
+    background: rgba(31, 41, 55, 0.9) !important;
+}
+
+/* ==================== TARJETAS DE PAGO ==================== */
+
+.p-3.rounded-4[style*="linear-gradient(135deg, #00c6ff"] {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-dark)) !important;
+}
+
+/* ==================== TEXTOS SECUNDARIOS ==================== */
+
+.text-on-surface-variant,
+.text-muted,
+.small.text-muted {
+    color: var(--brand-text-muted) !important;
+}
+
+/* ==================== EFECTOS INDUSTRIALES ==================== */
+
+.rounded-\\[2rem\\],
+.rounded-\\[2\\.5rem\\],
+.rounded-3xl {
+    backdrop-filter: blur(8px);
+}
+
+/* Línea decorativa */
+.bg-gradient-to-r.from-transparent.via-primary\\/30.to-transparent {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(215, 38, 30, 0.4),
+        transparent
+    ) !important;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+    main section:first-child {
+        min-height: 420px !important;
+    }
+
+    main section:first-child h1 {
+        font-size: 2.8rem !important;
+        line-height: 1 !important;
+    }
+
+    .group.relative.bg-surface-container-highest:hover {
+        transform: translateY(-4px);
+    }
+}
+
+
+
+
+/* =========================================
+   CARRUSEL ÚLTIMOS GANADORES
+========================================= */
+
+.winnersSwiper {
+    padding: 10px 6px 60px;
+    overflow: hidden;
+}
+
+.winner-card {
+    height: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #111827, #0b1220);
+    border: 1px solid rgba(55,65,81,.8);
+    transition: all .35s ease;
+    box-shadow: 0 18px 40px rgba(0,0,0,.35);
+}
+
+.winner-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(215,38,30,.45);
+    box-shadow: 0 24px 48px rgba(0,0,0,.45);
+}
+
+.winner-image-wrapper {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.winner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.winner-card:hover .winner-image {
+    transform: scale(1.08);
+}
+
+.winner-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .55rem .9rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #d7261e, #a81410);
+    color: #fff;
+    font-size: .78rem;
+    font-weight: 800;
+    box-shadow: 0 10px 24px rgba(215,38,30,.3);
+}
+
+.winner-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.winner-name {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.winner-prize {
+    color: #fca5a5;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.winner-date {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    color: #9ca3af;
+    font-size: .9rem;
+}
+
+/* Flechas */
+.winners-prev,
+.winners-next {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50%;
+    background: rgba(17,24,39,.92);
+    border: 1px solid rgba(215,38,30,.35);
+    color: #fff !important;
+    backdrop-filter: blur(10px);
+    transition: all .25s ease;
+}
+
+.winners-prev:hover,
+.winners-next:hover {
+    background: linear-gradient(135deg, #d7261e, #a81410);
+    border-color: transparent;
+    transform: scale(1.05);
+}
+
+.winners-prev::after,
+.winners-next::after {
+    font-size: 16px !important;
+    font-weight: 900;
+}
+
+/* Paginación */
+.winners-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(156,163,175,.5);
+    opacity: 1;
+}
+
+.winners-pagination .swiper-pagination-bullet-active {
+    width: 26px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #d7261e, #a81410);
+}
+
+@media (max-width: 768px) {
+    .winner-image-wrapper {
+        height: 240px;
+    }
+}
+
+
+
+/* =========================================================
+   ESTILO SORTEOS DE MOTOS / MOTOTAXIS
+========================================================= */
+
+.hero-moto {
+    background: linear-gradient(135deg, #0b0f14 0%, #111827 60%, #1f2937 100%);
+    border: 1px solid rgba(215, 38, 30, 0.25);
+    box-shadow: 0 30px 80px rgba(0,0,0,.45);
+}
+
+.hero-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .65rem 1rem;
+    border-radius: 999px;
+    background: rgba(215, 38, 30, .12);
+    border: 1px solid rgba(215, 38, 30, .35);
+    color: #fca5a5;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.feature-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .75rem 1rem;
+    border-radius: 14px;
+    background: rgba(17,24,39,.9);
+    border: 1px solid rgba(55,65,81,.8);
+    color: #e5e7eb;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.counter-box {
+    width: 88px;
+    padding: .9rem .5rem;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #111827, #0f172a);
+    border: 1px solid rgba(215,38,30,.35);
+    text-align: center;
+}
+
+.counter-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.btn-hero-primary {
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #d7261e, #a81410);
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: .08em;
+    border: none;
+    box-shadow: 0 12px 30px rgba(215,38,30,.35);
+}
+
+.glass-prize-card {
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 24px;
+    background: rgba(15,23,42,.72);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,.45);
+}
+
+.next-raffle-board {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 32px;
+    background: linear-gradient(135deg, #111827, #0f172a);
+    border: 1px solid rgba(55,65,81,.75);
+}
+
+.dashboard-counter {
+    min-width: 100px;
+    padding: 1rem .75rem;
+    border-radius: 18px;
+    background: #0b1220;
+    border: 1px solid rgba(55,65,81,.9);
+    text-align: center;
+}
+
+.dashboard-counter.active {
+    border-color: rgba(215,38,30,.55);
+    box-shadow: 0 0 20px rgba(215,38,30,.18);
+}
+
+.dashboard-counter span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.dashboard-counter small {
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: #9ca3af;
+    font-size: .65rem;
+}
+
+.btn-board-action {
+    padding: 1rem 1.5rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #d7261e, #a81410);
+    color: #fff;
+    font-weight: 900;
+    border: none;
+}
+
+.vehicle-raffle-card {
+    height: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #111827, #0b1220);
+    border: 1px solid rgba(55,65,81,.8);
+    transition: all .35s ease;
+}
+
+.vehicle-raffle-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(215,38,30,.45);
+    box-shadow: 0 24px 48px rgba(0,0,0,.45);
+}
+
+.vehicle-image-wrapper {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+.vehicle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s ease;
+}
+
+.vehicle-raffle-card:hover .vehicle-image {
+    transform: scale(1.08);
+}
+
+.vehicle-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.15));
+}
+
+.vehicle-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: .5rem .9rem;
+    border-radius: 999px;
+    background: rgba(215,38,30,.95);
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+.vehicle-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.vehicle-category {
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .22em;
+    color: #fca5a5;
+    text-transform: uppercase;
+}
+
+.vehicle-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.vehicle-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    color: #9ca3af;
+    font-size: .82rem;
+}
+
+.vehicle-btn {
+    width: 100%;
+    padding: .95rem 1rem;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, #d7261e, #a81410);
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: .06em;
+}
+
+.section-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .55rem 1rem;
+    border-radius: 999px;
+    background: rgba(215,38,30,.12);
+    border: 1px solid rgba(215,38,30,.28);
+    color: #fca5a5;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.steps-moto-section {
+    padding: 3rem 1rem;
+    border-radius: 36px;
+    background: linear-gradient(180deg, #111827, #0b1220);
+    border: 1px solid rgba(55,65,81,.7);
+}
+
+.step-card {
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 24px;
+    background: rgba(15,23,42,.92);
+    border: 1px solid rgba(55,65,81,.8);
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(215,38,30,.4);
+    box-shadow: 0 18px 36px rgba(0,0,0,.4);
+}
+
+.step-icon {
+    width: 74px;
+    height: 74px;
+    margin: 0 auto 1.25rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #d7261e, #a81410);
+    color: #fff;
+    font-size: 1.6rem;
+    box-shadow: 0 14px 30px rgba(215,38,30,.28);
+}
+
+.step-card h3 {
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: .75rem;
+}
+
+.step-card p {
+    color: #9ca3af;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .hero-moto h1 {
+        font-size: 3rem !important;
+    }
+
+    .counter-box {
+        width: 72px;
+    }
+
+    .dashboard-counter {
+        min-width: 78px;
+    }
+}
+
+
+
+/* HERO FULL WIDTH */
+.hero-fullwidth {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border-radius: 0 0 2.5rem 2.5rem;
+    overflow: hidden;
+}
+
+/* opcional: efecto más cinematográfico */
+.hero-fullwidth::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 20% 30%,
+        rgba(215, 38, 30, 0.18),
+        transparent 45%
+    );
+    pointer-events: none;
+}
+
+/* =========================================
+   CORRECCIÓN HERO Y BOTONES
+========================================= */
+
+.hero-fullwidth {
+    position: relative;
+    z-index: 1;
+}
+
+/* La siguiente sección debe quedar por encima */
+.next-raffle-board {
+    position: relative;
+    z-index: 5;
+    pointer-events: auto;
+}
+
+/* Asegurar que el botón reciba clics */
+.btn-board-action {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .hero-fullwidth {
+        border-radius: 0 0 1.5rem 1.5rem;
+    }
+}
+
+
+/* FIN DEL NUEVO DUISEÑO */
+
+body {
+    min-height: max(884px, 100dvh);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.top-20 {
+    margin-bottom: 100px;
+}
+
+.gold {
+    color: #FFD700;
+}
+
+
+
+.btn-gold {
+    background: #FFD700;
+    color: #000;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: #e6c200;
+}
+
+.border-gold {
+    border: 1px solid #FFD700;
+}
+
+.nav-btn {
+    border: 1px solid #FFD700;
+    color: #FFD700;
+    padding: 8px 18px;
+    border-radius: 12px;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+.hero-badge {
+    border: 1px solid #FFD700;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    color: #FFD700;
+}
+
+.title-main {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #FFD700, #fff, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.countdown-card {
+    border: 1px solid #FFD700;
+    border-radius: 30px;
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    background: #222;
+
+    /* 🔥 EFECTO PRO */
+    box-shadow:
+        0 0 10px rgba(255, 215, 0, 0.15),
+        0 0 25px rgba(255, 215, 0, 0.1),
+        0 10px 40px rgba(0, 0, 0, 0.6);
+
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    position: relative;
+}
+
+.countdown-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    padding: 1px;
+    background: linear-gradient(45deg, #FFD700, transparent, #FFD700);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.countdown-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 0 15px rgba(255, 215, 0, 0.25),
+        0 0 35px rgba(255, 215, 0, 0.2),
+        0 15px 50px rgba(0, 0, 0, 0.8);
+}
+
+.btn-gold-gradient {
+    background: linear-gradient(45deg, #FFD700, #e6c200);
+    color: #000;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 12px 25px;
+    transition: 0.3s;
+}
+
+.btn-gold-gradient:hover {
+    transform: scale(1.05);
+}
+
+.btn-outline-gold {
+    border: 1px solid #FFD700;
+    color: #FFD700;
+    border-radius: 12px;
+    padding: 12px 25px;
+    transition: 0.3s;
+}
+
+.btn-outline-gold:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+.kpi-card {
+    border: 1px solid #FFD700;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.navbar-toggler {
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+
+@media (max-width: 991px) {
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.card-sorteo {
+    border: 1px solid #FFD700;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    background: #111;
+}
+
+.card-sorteo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.card-sorteo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.btn-participar {
+    background: linear-gradient(45deg, #FFD700, #e6c200);
+    color: #000;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 12px;
+    width: 100%;
+}
+
+.modal-content {
+    background: #0f0f0f;
+    border: 1px solid #FFD700;
+    border-radius: 20px;
+}
+
+.form-control {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.form-control:focus {
+    border-color: #FFD700;
+    box-shadow: none;
+}
+
+.qr-box {
+    border: 1px dashed #FFD700;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.btn-participar-main {
+    background: linear-gradient(45deg, #FFD700, #e6c200);
+    color: #000;
+    font-weight: 700;
+    padding: 14px 35px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.btn-participar-main:hover {
+    transform: scale(1.05);
+}
+
+.product-card {
+    background: #111;
+    border: 1px solid #FFD700;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.badge-qty {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #FFD700;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 215, 0, 0.7);
+    /* dorado suave */
+}
+
+.kpi-section {
+    margin-top: 60px;
+}
+
+.kpi-item h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.kpi-item p {
+    font-size: 0.95rem;
+}
+
+.kpi-divider {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, #FFD700, transparent);
+}
+
+/* Base */
+.nav-link-pro {
+    text-decoration: none !important;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover efecto glow */
+.nav-link-pro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* INICIO */
+.nav-inicio {
+    background: rgba(255, 215, 0, 0.08);
+    color: #FFD700;
+}
+
+.nav-inicio:hover {
+    background: linear-gradient(45deg, #FFD700, #e6c200);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* TICKETS */
+.nav-tickets {
+    background: rgba(0, 200, 83, 0.08);
+    color: #00C853;
+}
+
+.nav-tickets:hover {
+    background: linear-gradient(45deg, #00C853, #00a844);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* GANADORES */
+.nav-ganadores {
+    background: rgba(255, 87, 34, 0.08);
+    color: #FF5722;
+}
+
+.nav-ganadores:hover {
+    background: linear-gradient(45deg, #FF5722, #e64a19);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* EFECTO HOVER GENERAL */
+.nav-link-pro:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* MOBILE FULL WIDTH */
+@media (max-width: 991px) {
+    .nav-link-pro {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.footer-pro {
+    background: #0A0A0A;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFD700;
+    padding-left: 5px;
+}
+
+/* Redes */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #FFD700;
+    border-radius: 50%;
+    color: #FFD700;
+    margin-right: 8px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background: #FFD700;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* Divider */
+.footer-divider {
+    border-color: rgba(255, 215, 0, 0.2);
+}
+
+
+/* .text-primary {
+    --bs-text-opacity: 1;
+    color: rgb(250, 131, 27) !important;
+} */
+
+/* .border-primary {
+    --bs-border-opacity: 1;
+    border-color: rgb(250, 131, 27) !important;
+} */
+
+/* .to-primary-dim {
+    --tw-gradient-to: rgb(250, 131, 27);
+} */
+
+/* .from-primary {
+    --tw-gradient-from: rgb(250, 130, 20) !important;
+    --tw-gradient-to: rgb(250, 130, 20) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+} */
+
+/* .bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: rgb(250, 130, 20) !important;
+} */
+
+/* .text-primary-container {
+    --tw-text-opacity: 1;
+    color: rgb(250, 130, 20) !important;
+} */
+
+.text-\[\#90abff\] {
+    --tw-text-opacity: 1;
+    color: rgb(250, 130, 20) !important;
+}
+
+.h-48 {
+    height: 20rem !important;
+}
+
+
+
+
+
+
+
+
+
+.modal-content {
+    backdrop-filter: blur(20px);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control,
+.form-select {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
+}
+
+
+.ticket-shape {
+    border-radius: 16px;
+
+    /* 🎟️ Forma de ticket real */
+    clip-path: polygon(0% 0%,
+            100% 0%,
+            100% 35%,
+            95% 40%,
+            100% 45%,
+            100% 55%,
+            95% 60%,
+            100% 65%,
+            100% 100%,
+            0% 100%,
+            0% 65%,
+            5% 60%,
+            0% 55%,
+            0% 45%,
+            5% 40%,
+            0% 35%);
+}
+
+
+
+/* WhatsApp */
+
+/* Base */
+.btn-floating:hover img {
+    margin-bottom: -3px
+}
+
+.btn-floating {
+    position: fixed;
+    right: 25px;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: 0;
+    z-index: 9999;
+    color: white;
+    transition: .2s;
+}
+
+.btn-floating:hover {
+    width: auto;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.btn-floating span {
+    font-size: 16px;
+    margin-left: 5px;
+    transition: .2s;
+    line-height: 0px;
+    display: none;
+}
+
+.btn-floating:hover span {
+    display: inline-block;
+}
+
+/* Phone */
+.btn-floating.phone {
+    bottom: 165px;
+    background-color: #760f10;
+}
+
+.btn-floating.phone:hover {
+    background-color: #c03421;
+}
+
+/* WhatsApp */
+.btn-floating.whatsapp {
+    background-color: #34af23;
+    bottom: 105px;
+}
+
+.btn-floating.whatsapp:hover {
+    background-color: #1f7a12
+}
+
+.hexagon {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.text-glow-blue {
+    text-shadow: 0 0 10px rgba(144, 171, 255, 0.6);
+}
+
+.badge-glow {
+    filter: drop-shadow(0 0 8px rgba(248, 160, 16, 0.4));
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.hexagon {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.text-glow-blue {
+    text-shadow: 0 0 10px rgba(144, 171, 255, 0.6);
+}
+
+.badge-glow {
+    filter: drop-shadow(0 0 8px rgba(248, 160, 16, 0.4));
+}
+
+.hexagon-flat {
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+}
+
+/* Fin WhatsApp */
+
+
+/* .bg-secondary {
+    background-color: rgb(250, 130, 20) !important;
+} */
+
+.text-secondary{
+    color: rgb(250, 130, 20) !important;
+}
