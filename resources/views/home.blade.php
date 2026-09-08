@@ -395,11 +395,11 @@
 
                         <!-- Tipo Documento -->
                         <div class="col-md-6">
-                            <label class="form-label text-dark fw-semibold">
+                            <label class="form-label text-white fw-semibold">
                                 Tipo de Documento
                             </label>
 
-                            <select class="form-select bg-light text-dark border"
+                            <select class="form-select border bg-light text-dark"
                                 name="tipo_documento"
                                 required>
 
@@ -504,7 +504,7 @@
                                 Cantidad de Tickets
                             </label>
 
-                            <div class="d-flex align-items-center justify-content-between rounded-4 px-3"
+                            <div class="form-control d-flex align-items-center justify-content-between rounded-4 px-3"
                                 style="height: 48px; background:#f1f3f5;">
 
                                 <button type="button"
@@ -534,8 +534,7 @@
                     </div>
 
                     <!-- SECCIÓN PAGO -->
-                    <div class="mt-4 p-4 rounded-4"
-                        style="background-color: #f8f9fa;">
+                    <div class="bg-surface-container-low mt-4 p-4 rounded-4">
 
                         <div class="row align-items-center">
 
@@ -546,10 +545,12 @@
                                     Pago por Yape
                                 </h6>
 
-                                <img src="{{ asset('img/yape-qr1.jpeg') }}"
+                                <img src="{{ asset('img/yape-ir.jpeg') }}"
                                     alt="QR Yape"
                                     class="img-fluid rounded shadow mb-3 m-auto"
                                     style="max-width: 200px;">
+                                
+                                <p class="mt-2 small text-dark"> Importaciones Ramirez E.I.R.L</p>
 
                                 <p class="mt-2 small text-muted">
                                     Escanea para pagar
@@ -558,7 +559,7 @@
                                 <div class="p-2 rounded-4 d-flex align-items-center justify-content-between"
                                     style="background-color: #ffffff; border:1px solid #dee2e6;">
 
-                                    <div class="fw-bold text-dark"
+                                    <div class="fw-bold text-dark" style="color: #333 !important; " 
                                         id="yapeNumero"
                                         data-numero="{{ $empresa->whatsapp }}">
 
@@ -606,7 +607,7 @@
                                                 Total a pagar
                                             </div>
 
-                                            <div class="fw-bold fs-4 text-success"
+                                            <div class="fw-bold fs-4" style="color: #333 !important;"
                                                 id="totalPagar">
 
                                                 S/ {{ number_format($sorteo->price, 2) }}

@@ -163,11 +163,20 @@ button.bg-gradient-to-r:hover,
 }
 
 /* Inputs */
+.form-select {
+    color: #fff !important; /* texto seleccionado en blanco */
+}
+
+.form-select option {
+    color: #000 !important; /* opciones en negro */
+    background: #fff;        /* fondo blanco al desplegar */
+}
+
 .form-control,
 .form-select {
-    background: rgba(17, 24, 39, 0.95) !important;
+    /* background: var(--brand-text) !important; */
     border: 1px solid var(--brand-border) !important;
-    color: var(--brand-text) !important;
+    color: var(--brand-surface-2) !important;
 }
 
 .form-control:focus,
@@ -1325,3 +1334,5 @@ body {
 .text-secondary{
     color: rgb(250, 130, 20) !important;
 }
+
+

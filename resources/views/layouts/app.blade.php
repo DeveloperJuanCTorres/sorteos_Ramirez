@@ -92,7 +92,7 @@
     </script>
 
     <?php
-        $version = '1993.4.9';
+        $version = '1993.5.1';
     ?>
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('logos/oxa_16x16.png') }}?v=<?php echo $version ?>">
