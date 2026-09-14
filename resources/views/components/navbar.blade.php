@@ -37,7 +37,7 @@
 <a href="https://api.whatsapp.com/send?phone=51989876161" target="_blank">
   <button class="btn-floating whatsapp">
     <i class="fa-brands fa-whatsapp text-2xl"></i>
-    <span>(51) 989876161</span>
+    <span>(51) 943323518</span>
   </button>
 </a>
 
