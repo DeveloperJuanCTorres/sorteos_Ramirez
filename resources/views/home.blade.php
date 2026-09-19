@@ -545,7 +545,7 @@
                                     Pago por Yape
                                 </h6>
 
-                                <img src="{{ asset('img/yape-ir.jpeg') }}"
+                                <img src="{{ asset('img/qr-yape-ir.jpeg') }}"
                                     alt="QR Yape"
                                     class="img-fluid rounded shadow mb-3 m-auto"
                                     style="max-width: 200px;">
