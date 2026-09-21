@@ -48,11 +48,20 @@
                     </div>
                 </div>
 
-                <button data-bs-toggle="modal"
+                <!-- <button data-bs-toggle="modal"
                     data-bs-target="#modalRegistro"
                     class="btn-hero-primary">
                     PARTICIPAR AHORA
-                </button>
+                </button> -->
+
+                <button data-bs-toggle="modal"
+                    data-bs-target="#modalRegistro"
+                    class="btn-hero-primary"
+                    onclick="fbq('track','Lead',{
+                        content_name:'{{ $sorteo->name }}'
+                    });">
+                PARTICIPAR AHORA
+            </button>
             </div>
         </div>
 
@@ -127,11 +136,20 @@
                 </div>
             </div>
 
-            <button data-bs-toggle="modal"
+            <!-- <button data-bs-toggle="modal"
                 data-bs-target="#modalRegistro"
                 class="btn-board-action">
                 COMPRAR TICKETS
-            </button>
+            </button> -->
+
+            <button data-bs-toggle="modal"
+                data-bs-target="#modalRegistro"
+                class="btn-board-action"
+                onclick="fbq('track','Lead',{
+                    content_name:'{{ $sorteo->name }}'
+                });">
+            COMPRAR TICKETS
+        </button>
         </div>
     </section>
 
@@ -648,7 +666,7 @@
                                         <input type="file"
                                             id="inputComprobante"
                                             name="comprobante"
-                                            accept="image/jpeg,image/png,image/webp,.pdf""
+                                            accept="image/jpeg,image/png,image/jpg"
                                             class="position-absolute top-0 start-0 w-100 h-100 opacity-0"
                                             required>
 
@@ -729,6 +747,13 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    fbq('track','ViewContent',{
+        content_name:'{{ $sorteo->name }}',
+        content_type:'sorteo'
+    });
+</script>
 
 
 <script>
@@ -1172,7 +1197,12 @@
         const file = this.files[0];
 
         if (file) {
-            fileName.textContent = "Archivo: " + file.name;
+
+            fbq('track','AddPaymentInfo',{
+                payment_type:'Yape'
+            });
+
+            fileName.textContent = "Archivo: " + file.name;            
 
             // Preview solo si es imagen
             if (file.type.startsWith('image/')) {

@@ -8,6 +8,8 @@ use App\Models\Ticket;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\TicketsExport;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class TicketController extends Controller
 {
@@ -91,7 +93,7 @@ class TicketController extends Controller
             $rutaComprobante = $request->file('comprobante')->store('comprobantes', 'public');
         }
 
-        Ticket::create([
+        $ticket = Ticket::create([
             'sorteo_id'   => $sorteo->id,
             'dni'         => $request->numero_documento,
             'nombres'     => $request->nombres,
@@ -102,6 +104,68 @@ class TicketController extends Controller
             'aprobado'    => 0,
             'cantidad'    => $request->cantidad
         ]);
+
+        $eventId = Str::uuid()->toString();
+
+        $eventValue = $ticket->cantidad * $sorteo->price;
+
+        $phone = preg_replace('/\D/', '', $ticket->telefono);
+
+        $userData = [
+            'ph' => hash('sha256', '51' . $phone),
+            'fn' => hash('sha256', strtolower(trim($ticket->nombres))),
+            'ln' => hash('sha256', strtolower(trim($ticket->apellidos))),
+            'st' => hash('sha256', strtolower(trim($ticket->departamento))),
+        ];
+
+        try {
+
+            $response = Http::post(
+                'https://graph.facebook.com/v23.0/' .
+                config('meta.dataset_id') .
+                '/events',
+                [
+                    'data' => [
+                        [
+                            'event_name' => 'Purchase',
+                            'event_time' => time(),
+                            'event_id' => $eventId,
+                            'action_source' => 'website',
+
+                            'event_source_url' => url()->current(),
+
+                            'user_data' => $userData,
+
+                            'custom_data' => [
+                                'currency' => 'PEN',
+                                'value' => (float) $eventValue,
+                                'content_name' => $sorteo->name,
+                                'content_type' => 'product',
+                                'content_ids' => [
+                                    (string) $sorteo->id
+                                ],
+                                'num_items' => (int) $ticket->cantidad,
+                            ],
+                        ]
+                    ],
+
+                    'access_token' => config('meta.access_token'),
+
+                    'test_event_code' => config('meta.test_event_code'),
+                ]
+            );
+
+            \Log::info('Meta Conversions API', [
+                'status' => $response->status(),
+                'response' => $response->json(),
+            ]);
+
+        } catch (\Throwable $e) {
+
+            \Log::error('Error Meta Conversions API', [
+                'message' => $e->getMessage(),
+            ]);
+        }
 
         return response()->json([
             'success' => true,
